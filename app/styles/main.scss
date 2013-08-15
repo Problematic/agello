@@ -1,0 +1,44 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import "bootstrap-sass/lib/bootstrap";
+
+/* Put your CSS here */
+html, body {
+  margin: 20px;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.list {
+  border: 1px solid black;
+  width: 250px;
+  float: left;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.card {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px 0;
+
+}
+
+.title {
+  font-weight: bold;
+  font-size: larger;
+  float: left;
+}
+
+.reorder-buttons {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}

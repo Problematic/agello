@@ -1,0 +1,17 @@
+<div class="list">
+  <div class="title">{{ list.name }}</div>
+  <div class="reorder-buttons">
+    <button ng-click="reorder($event, -1)">
+      <i class="icon-arrow-left"></i>
+    </button>
+    <button ng-click="reorder($event, 1)">
+      <i class="icon-arrow-right"></i>
+    </button>
+  </div>
+  <div class="cards clearfix" ng-transclude></div>
+  <div class="add-card">
+    <form ng-submit="addTask()">
+      <input type="text" name="task-name" required ng-minlength="3" ng-model="taskToAdd">
+    </form>
+  </div>
+</div>
