@@ -36,19 +36,19 @@ angular.module('agileApp')
     });
 
     $scope.$on('list.reorder', function ($event, list, delta) {
-        var idx = $scope.lists.indexOf(list),
-          swappedList = $scope.lists[idx + delta],
-          newOrder = list.order + delta;
+      var idx = $scope.lists.indexOf(list),
+        swappedList = $scope.lists[idx + delta],
+        newOrder = list.order + delta;
 
-        if (swappedList) {
-          swappedList.order = list.order;
-        }
+      if (swappedList) {
+        swappedList.order = list.order;
+      }
 
-        if (newOrder >= 0 && newOrder < $scope.lists.length) {
-          list.order += delta;
-        }
-        $scope.lists.sort(function (a, b) {
-          return a.order - b.order;
-        });
+      if (newOrder >= 0 && newOrder < $scope.lists.length) {
+        list.order += delta;
+      }
+      $scope.lists.sort(function (a, b) {
+        return a.order - b.order;
       });
+    });
   });

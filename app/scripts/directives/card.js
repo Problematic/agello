@@ -6,7 +6,7 @@ angular.module('agileApp')
       templateUrl: 'views/card.html',
       restrict: 'EA',
       replace: true,
-      transclude: true,
+      scope: true,
       controller: ['$scope', '$parse', '$attrs', function ($scope, $parse, $attrs) {
         $scope.reorder = function ($event, delta) {
           var $el = angular.element($event.target),

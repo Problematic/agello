@@ -6,7 +6,9 @@ angular.module('agileApp')
       templateUrl: 'views/list.html',
       restrict: 'EA',
       replace: true,
-      transclude: true,
+      scope: {
+        list: '='
+      },
       controller: ['$scope', '$parse', '$attrs', function ($scope, $parse, $attrs) {
         var model = $parse($attrs.list)($scope);
 
